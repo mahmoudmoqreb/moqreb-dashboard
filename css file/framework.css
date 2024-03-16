@@ -1,0 +1,163 @@
+/* start color */
+.bg-w{
+    background-color: white;
+}
+.b-c{
+    color: black;
+}
+.main-c{
+color: #0075ff;
+}
+.bg-main-c{
+background-color: #0075ff;
+}
+.alt-c{
+    color: #0d69d5;
+}
+.bg-alt-c{
+    background-color: #0d69d5;
+}
+.green-c{
+color: #22c55e;
+}
+.yellow-c{
+    color: #f59e0b;
+}
+.red-c{
+    color:#f44336 ;
+}
+.active{
+    background-color: #f6f6f6;
+}
+.t-c{
+    color: #777;
+}
+/* end color */
+
+
+/* start box */
+.d-flex{
+display: flex;
+}
+.d-grid{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(450px,1fr));
+}
+.d-block{
+    display: block;
+}
+.p-rel{
+    position: relative;
+}
+.p-abs{
+    position: absolute;
+}
+.b-shad{
+    box-shadow: 0 0 10px #ddd;
+
+}
+/* end box */
+/* start text */
+.t-center{
+    text-align: center;
+}
+.j-center{
+    justify-content: center;
+}
+.align-c{
+    align-items: center;
+}
+.f-size{
+    font-size: 25px;
+}
+.f-s13{
+    font-size: 13px;
+}
+.f-w{
+    font-weight: bold;
+}
+.j-between{
+    justify-content: space-between;
+}
+.w-fit{
+    width: fit-content;
+}
+.bord-6{
+    border: solid 6px #ddd;
+}
+.bord-rad10{
+    border-color: #ddd;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.rad{ border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%;
+}
+.pointer{
+    cursor: pointer;
+}
+.line-h{
+    line-height: 1.8;
+}
+/* end text */
+/* start padding + margin + gap */
+.p-10{
+    padding:10px;
+}
+.p-20{
+    padding:20px;
+}
+.pt-10{
+    padding-top:10px;
+}
+.pt-20{
+    padding-top: 20px;
+}
+.pb-10{
+    padding-bottom:10px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}  
+
+
+.m-auto{
+margin: 0 auto;
+}
+.m-10{
+    margin:10px;
+}
+.m-20{
+    margin:20px;
+}
+.mt-10{
+    margin-top:10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mr-20{
+    margin-right:20px;
+}
+
+.mb-10{
+    margin-bottom:10px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.ml-20{
+    margin-left: 20px;
+}
+
+.gap-20{
+    gap: 20px;
+}
+/* end padding + margin */
+/* start opacity */
+.o{
+    opacity: .6;
+}
+/* end opacity */
