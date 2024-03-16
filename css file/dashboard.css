@@ -849,3 +849,84 @@ table span.rejected{
     }
 }
 /* end animation */
+/*start profile page */
+@media (max-width:991px) {
+    .pg .section .content .profile-card{
+        flex-direction: column;
+        text-align: center;
+    }
+    .pg .section .content .profile-card .right .info{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.pg .section .content .left .text span::before{ content: ""; position: absolute; width: 80%; height: 5px; bottom: -25px; left: 20px; background-color: #ddd; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; -ms-border-radius:10px; -o-border-radius:10px;
+}
+.pg .section .content .left .text span::after{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 5px;
+    bottom:-25px;
+    left: 20px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    animation: full infinite 5s;
+    -webkit-animation: full infinite 5s;
+}
+.pg .section .content .right{
+    border-left: solid #ddd 1px;
+}
+.pg .section .content .right .info{
+    border-bottom: solid #ddd 1px;
+}
+.other-data .skills span{
+    background-color: #ededed;
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+.other-data .skills span:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+.activity-list>div:not(:last-child){
+    border-bottom: solid #ddd 1px;
+}
+@media (max-width:991px) {
+    .activity-list .store,
+    .activity-list .store .icon,
+    .activity-list .academy,
+    .activity-list .academy .icon,
+    .activity-list .budges,
+    .activity-list .budges .icon,
+    .activity-list .store{
+flex-direction: column;
+text-align: center;
+}
+}
+@media (max-width:767px) {
+    .other-data{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+}
+/*end profile page */
+/* start animation */
+@keyframes full {
+    0%, 100%{
+        width: 80%;
+    }
+    50%{
+        width: 60%;
+    }
+}
+/* end animation */
