@@ -39,6 +39,9 @@ color: #22c55e;
 .d-flex{
 display: flex;
 }
+.f-end{
+    justify-content: end;
+}
 .d-grid{
     display: grid;
     grid-template-columns:repeat(auto-fill,minmax(450px,1fr));
@@ -54,7 +57,6 @@ display: flex;
 }
 .b-shad{
     box-shadow: 0 0 10px #ddd;
-
 }
 /* end box */
 /* start text */
