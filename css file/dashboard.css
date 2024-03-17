@@ -157,7 +157,6 @@ padding-right: 7px;
     outline: none;
     width: 200px;
     height: 40px;
-    padding: 30px;
     transition: var(--transition-section);
     -webkit-transition: var(--transition-section);
     -moz-transition: var(--transition-section);
@@ -167,8 +166,8 @@ padding-right: 7px;
 .section .data form input:focus{
     width: 250px;
 }
-.section .data form input::placeholder{
-text-transform: capitalize;
+.section .data form input[type=search]::placeholder{
+padding: 30px;
 }
 .section .data form input:focus::placeholder{
 opacity: 0;
@@ -976,6 +975,403 @@ width: 20%;
 width: 25%;
 }
 /* end projects page */
+
+/* start friends page */
+.friends{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+}
+@media (max-width:576px) {
+    .friends{
+        display: grid;
+        grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+        text-align: center;
+    }
+    .friends .text{
+        margin-bottom: 30px;
+    }
+
+}
+@media (max-width:767px) {
+    .friends{
+        text-align: center;
+    }
+    .friends .box .footer .bottom{
+        justify-content: space-evenly;
+        }
+}
+.friends .box{
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+.friends .box:hover{
+    background-color: #ecececec;
+}
+.friends .box> .icons {
+    justify-content: flex-start;
+}
+.friends .box> .icons i:hover{
+    background-color: var(--main-color);
+    color: black;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    cursor: pointer;
+}
+.friends .box> .icons i{
+    background-color: #ececee;
+    font-size: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+    color: gray;
+}
+.friends .box .top img:hoveR{
+    transform: rotatey(.5turn) scale(1.3);
+    -webkit-transform: rotatey(.5turn) scale(1.3);
+    -moz-transform: rotatey(.5turn) scale(1.3);
+    -ms-transform: rotatey(.5turn) scale(1.3);
+    -o-transform: rotatey(.5turn) scale(1.3);
+}
+.friends .box .top img{
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+.friends .box .footer .bottom{
+    flex-wrap: wrap;
+}
+.friends .box .footer .bottom button{
+    display: inline-block;
+    border: none;
+    color: white;
+    padding:5px 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+/* end friends page */
+
+/* start files page */
+.files{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr)) ;
+}
+.files .file{
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+
+.files .file:hover{
+    background-color: #ecececec;
+}
+.files .file i:hover{
+    color: var(--main-color);
+    transform:scale(1.1) ;
+    -webkit-transform:scale(1.1) ;
+    -moz-transform:scale(1.1) ;
+    -ms-transform:scale(1.1) ;
+    -o-transform:scale(1.1) ;
+
+}
+.files .file i{
+    cursor: pointer;
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+.files .file img{ text-align: center; margin: 0 auto; transition: var(--transition-section); -webkit-transition: var(--transition-section); -moz-transition: var(--transition-section); -ms-transition: var(--transition-section); -o-transition: var(--transition-section);
+}
+.files .file img:hover{
+    transform: translateY(-10px) scale(1.2);
+    -webkit-transform: translateY(-10px) scale(1.2);
+    -moz-transform: translateY(-10px) scale(1.2);
+    -ms-transform: translateY(-10px) scale(1.2);
+    -o-transform: translateY(-10px) scale(1.2);
+    cursor: pointer;
+}
+.files .file p:hoveR{
+    color: var(--alt-color);
+    cursor: pointer;
+
+}
+.files .file p{
+    text-align: center;
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+.files .file .bottom10{
+    padding-top: 20px;
+    border-top: solid #ddd 1px;
+
+}
+@media (max-width:767px) {
+    .info-file{
+        flex-wrap: wrap;
+    }
+    .info-file .stats{
+        order: -1;
+    }
+}
+.info-file .stats .file-box{
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+.info-file .stats .file-box:hover{
+    background-color: #ecececec;
+}
+.info-file .stats .file-box{
+    border: solid #ddd 1px;
+    margin-bottom:20px ;
+    padding: 0 15px 0 15px;
+}
+.info-file .stats button:hover{ 
+    background-color: var(--alt-color);
+    cursor: pointer;
+}
+.info-file .stats button{ border: none; padding:10px 20px; margin: 0 auto; text-align: center; transition: var(--transition-section); -webkit-transition: var(--transition-section); -moz-transition: var(--transition-section); -ms-transition: var(--transition-section); -o-transition: var(--transition-section);
+    color: white;
+text-transform: capitalize;
+display: block;
+}
+/* end files page */
+/* start courses page */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+.courses .course:hover{
+background-color: #ecececec;
+}
+.courses .course{
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+.courses .course p{
+    color: #777;
+}
+@media (max-width:567px) {
+    .courses{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        text-align: center;
+    }
+}
+.courses .text{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.courses .foot-course{
+    padding: 10px;
+
+}
+.courses button{
+    border: none;
+    padding:5px 10px ;
+    color: white;
+    text-transform: capitalize;
+}
+/* end courses page */
+/* start plans page */
+@media (max-width:767px) {
+.section .content .plans{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+}
+.plans header span::before{
+    content: "$";
+    position: absolute;
+    bottom: 20px;
+    left: -25px;
+    font-size:30px ;
+}
+.plans .plan-free header{ background-color: var(--green-color); color: white; border: 1px solid white; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; -ms-border-radius:10px; -o-border-radius:10px;
+}
+.plans .plan-basic header{ background-color: var(--main-color); color: white; border: 1px solid white; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; -ms-border-radius:10px; -o-border-radius:10px;
+}
+.plans .plan-premium header{ background-color: var(--yellow-color); color: white; border: 1px solid white; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; -ms-border-radius:10px; -o-border-radius:10px;
+}
+.plans footer .p-foot{ border-bottom: solid #ddd 1px; transition: var(--transition-section); -webkit-transition: var(--transition-section); -moz-transition: var(--transition-section); -ms-transition: var(--transition-section); -o-transition: var(--transition-section);
+}
+
+.plans footer .p-foot:hover{ 
+    background-color: #ecececec;
+}
+.plans  footer .p-foot i.fa-check{
+    color: var(--green-color);
+}
+.plans footer .p-foot i.fa-x{
+    color: var(--red-color);
+}
+.plans footer .p-foot i.fa-info{
+    color:#777;
+    cursor: pointer;
+}
+.plans .plan-free footer button{
+    background-color: var(--green-color);
+    border: none;
+    padding:10px 30px ;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.plans .plan-basic footer button{
+    background-color: var(--main-color);
+    border: none;
+    padding:10px 30px ;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.plans .plan-premium footer h5{
+    margin-top: 20px;
+}
+/* end plans page */
+/* start settings page */
+@media (max-width:767px) {
+    .settings{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .settings .setting .txt-control,
+    .settings .info form .email,
+    .settings .security>div{
+        flex-direction: column;  
+    }
+    .settings .setting .txt-control input[type=checkbox]{
+        margin-bottom: 20px;
+    }
+    .settings button,
+    .settings .security input[type=checkbox]{
+        margin-bottom:20px ;
+    }
+    
+}
+@media (min-width:768px) {
+        .settings{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        }
+
+}
+.settings input[type=checkbox]:checked{
+    color: var(--main-color);
+}
+.settings textarea:focus::placeholder{
+opacity: 0;
+}
+.settings textarea:focus{
+outline: none;
+}
+.settings textarea::placeholder{
+padding: 10px;
+text-transform: capitalize;
+opacity: .5;
+}
+.settings input::placeholder{
+    padding: 10px;
+    text-transform: capitalize;
+    opacity: .5;
+}
+.settings input[type=email]{
+    cursor: not-allowed;
+
+}
+.settings input[type=email]::placeholder{
+    background-color: #ddd;
+    width: 100%;
+}
+.settings input:focus{
+    outline: none;
+}
+.settings input[type=text]:focus::placeholder{
+    opacity: 0;
+}
+.settings .info label{
+    margin-bottom:20px ;
+}
+.settings .info button{
+    border: none;
+    padding:5px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: var(--main-color);
+    background-color: transparent;
+    cursor: pointer;
+}
+.settings .security>div{
+    border-bottom: solid 1px #ddd;
+}
+.settings .security>div button{
+    padding:7px 15px;
+    border: none;
+    text-transform: capitalize;
+}
+.settings .security>div button.change{ color: white; transition: var(--transition-section); -webkit-transition: var(--transition-section); -moz-transition: var(--transition-section); -ms-transition: var(--transition-section); -o-transition: var(--transition-section);
+}
+.settings .security>div button.change:hover{
+color: white;
+background-color: var(--alt-color);
+cursor: pointer;
+}
+.settings .security>div button.devices{ transition: var(--transition-section); -webkit-transition: var(--transition-section); -moz-transition: var(--transition-section); -ms-transition: var(--transition-section); -o-transition: var(--transition-section);
+}
+.settings .security>div button.devices:hover{
+color: white;
+background-color: var(--alt-color);
+cursor: pointer;
+}
+.settings .social input{
+    width: 95%
+}
+.settings .social input::placeholder{
+padding:10px;
+}
+.settings .social i{
+    color: #777;
+}
+/* end settings page */
 /* start animation */
 @keyframes pending {
     0% , 100%{
