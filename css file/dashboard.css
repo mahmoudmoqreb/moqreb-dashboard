@@ -899,8 +899,71 @@ text-align: center;
         flex-direction: column;
         text-align: center;
     }
+    .profile-card label .check-box{
+        margin-bottom: 20px;
+    }
     
 }
+.profile-card label input[type=checkbox]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.profile-card label input[type=checkbox]:checked +.check-box{
+background-color: var(--main-color);
+}
+.profile-card label .check-box{
+    position: relative;
+    width: 75px;
+    height: 25px;
+    background-color: #ddd;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    cursor: pointer;
+    
+}
+.profile-card label .check-box::before{
+    content: "\f00d";
+    font-family: 'Font Awesome\ 5 Free';
+    position: absolute;
+    font-weight: 900;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    left: 6px;
+    top:3px;
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+    color: #ddd;
+    background-color:white;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.profile-card label input[type=checkbox]:checked + .check-box::before{
+    content: "\f00c";
+    font-family: 'Font Awesome\ 5 Free';
+position: absolute;
+left: 50px;
+font-weight: 900;
+color: var(--main-color);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+
 /*end profile page */
 
 /* start projects page */
@@ -1283,17 +1346,83 @@ background-color: #ecececec;
     .settings .security input[type=checkbox]{
         margin-bottom:20px ;
     }
+    .settings .setting textarea {
+        margin-top: 20px;
+    }
+    .settings label .check-box{
+        margin-bottom: 20px;
+                    
+                }
     
 }
 @media (min-width:768px) {
         .settings{
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            
         }
 
+
 }
-.settings input[type=checkbox]:checked{
-    color: var(--main-color);
+
+.settings .setting label input[type=checkbox],
+.settings .security label input[type=checkbox]
+{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.settings label input[type=checkbox]:checked +.check-box{
+background-color: var(--main-color);
+}
+.settings label .check-box{
+    position: relative;
+    width: 75px;
+    height: 25px;
+    background-color: #ddd;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    cursor: pointer;
+    
+}
+.settings label .check-box::before{
+    content: "\f00d";
+    font-family: 'Font Awesome\ 5 Free';
+    position: absolute;
+    font-weight: 900;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    left: 6px;
+    top:3px;
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+    color: #ddd;
+    background-color:white;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.settings label input[type=checkbox]:checked + .check-box::before{
+    content: "\f00c";
+    font-family: 'Font Awesome\ 5 Free';
+position: absolute;
+left: 50px;
+font-weight: 900;
+color: var(--main-color);
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .settings textarea:focus::placeholder{
 opacity: 0;
@@ -1362,14 +1491,219 @@ color: white;
 background-color: var(--alt-color);
 cursor: pointer;
 }
-.settings .social input{
-    width: 95%
+.settings .social .facebook{
+    margin-top: 20px;
 }
-.settings .social input::placeholder{
-padding:10px;
+.settings .social .facebook,
+.settings .social .youtube,
+.settings .social .linkedin{
+    margin-bottom: 20px;
+}
+
+.settings .social input[type=text]{
+    width: 100%;
+    height: 40px;
+    background-color: #f6f6f6f6;
+    border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    -ms-border-radius: 0 6px 6px 0;
+    -o-border-radius: 0 6px 6px 0;
+    border: solid 1px #ddd;
+}
+.settings .social .github:focus-within i{
+color: black;
+}
+.settings .social .facebook:focus-within i{
+color: black;
+}
+.settings .social .youtube:focus-within i{
+color: black;
+}
+.settings .social .linkedin:focus-within i{
+color: black;
 }
 .settings .social i{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6f6;
+    border-radius: 6px 0 0 6px;
+    border: solid 1px #ddd;
     color: #777;
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+.settings .widgets div label:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+.settings .widgets div label{
+    font-weight: bold;
+    padding-left: 40px; position: relative; transition:var(--transition-section) ; -webkit-transition:var(--transition-section) ; -moz-transition:var(--transition-section) ; -ms-transition:var(--transition-section) ; -o-transition:var(--transition-section) ;
+}
+.settings .widgets input[type=checkbox]:checked + label::before{
+    transform:scale(1) rotate(1turn);
+    -webkit-transform:scale(1) rotate(1turn);
+    -moz-transform:scale(1) rotate(1turn);
+    -ms-transform:scale(1) rotate(1turn);
+    -o-transform:scale(1) rotate(1turn);
+}
+.settings .widgets div label::before{
+    position: absolute;
+    content: "";
+    cursor: pointer;
+    background-color: var(--main-color);
+    left: 6px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform:scale(0);
+    -webkit-transform:scale(0);
+    -moz-transform:scale(0);
+    -ms-transform:scale(0);
+    -o-transform:scale(0);
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+}
+.settings .widgets div label::after{
+    content: "\f00c";
+    font-family: 'Font Awesome\ 5 Free';
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    left: 5px;
+    top: 3px;
+    border: solid 1px #ddd;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.settings .widgets input[type=checkbox]
+{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.settings .backup .top div{
+    margin-bottom: 20px;
+}
+.settings .backup .top div label:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+.settings .backup .top div label{
+    font-weight: bold;
+    padding-left: 40px;
+    position: relative;
+    transition:var(--transition-section) ;
+    -webkit-transition:var(--transition-section) ; -moz-transition:var(--transition-section) ; -ms-transition:var(--transition-section) ; -o-transition:var(--transition-section) ;
+}
+.settings .backup .top input[type=radio]:checked + label::before{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.settings .backup .top input[type=radio]:checked + label::after{
+    border-color: var(--main-color);
+}
+.settings .backup .top div label::before{
+    position: absolute;
+    content: "";
+    cursor: pointer;
+    background-color: var(--main-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    left:6px;
+    top: 6px;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+.settings .backup .top div label::after{
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: solid 1px;
+    border-color:gray;
+    left:0;
+    top:0;
+}
+.settings .backup .top input[type=radio]
+{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+@media (max-width:767px) {
+    .settings .backup .servers{
+        flex-direction: column;
+        }
+}
+.settings .backup .servers{
+border-top: solid #ddd 1px;
+padding-top: 20px;
+cursor: pointer;
+
+}
+.settings .backup .servers .server{
+    border: solid 1px #ddd;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: var(--transition-section);
+    -webkit-transition: var(--transition-section);
+    -moz-transition: var(--transition-section);
+    -ms-transition: var(--transition-section);
+    -o-transition: var(--transition-section);
+    font-weight: bold;
+padding:20px;
+    font-size: 25px;
+}
+.settings .backup .servers input[type=radio]
+{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.settings .backup .servers input[type=radio]:checked + .server{
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
 /* end settings page */
 /* start animation */

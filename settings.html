@@ -94,8 +94,11 @@
                             <div class="txt-control d-flex j-between align-c">
 <div class="txt">                                <h4 class=" f-w">web control</h4>
     <p class="t-c"> open/close website and type the reason</p></div>
-<input type="checkbox" checked>
-                            </div>
+    <label>
+        <input class="toggle-check-box" type="checkbox"checked>
+        <div class="check-box"></div>
+    </label>        
+</div>
                             <textarea placeholder="close message content" style="width: 100%;height:150px;" class="bord-rad10"></textarea>
                             </div>
                             <div class="info mt-20 bg-w  p-rel p-10 bord-rad10">
@@ -145,8 +148,10 @@ height: 35px;">
                                         <h4>two-factor authentication</h4>
                                         <p class="t-c f-s13">enable/disable the feature</p>
                                     </div>
-<input type="checkbox" checked>
-                                </div>
+<label>
+    <input class="toggle-check-box" type="checkbox"checked>
+    <div class="check-box"></div>
+</label>                                </div>
                                 <div class="d-flex j-between align-c">
                                     <div class="txt">
                                         <h4>devices</h4>
@@ -160,16 +165,25 @@ height: 35px;">
                                     social info
                                 </h3>
                                 <p class="t-c">social media information</p>
-                                <form action="">
-                                    <i class="fa-brands fa-github"></i>
-                                    <input type="text" placeholder="github username" class="bord-rad10 mb-20 github">
-                                    <i class="fa-brands fa-facebook"></i>
-                                    <input type="text" placeholder="facebook username" class="bord-rad10 mb-20">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                    <input type="text" placeholder="linkedin username" class="bord-rad10 mb-20">
-                                    <i class="fa-brands fa-youtube"></i>
-                                    <input type="text" placeholder="youtube username" class="bord-rad10 mb-20">
-                                </form>
+                <div class="github d-flex align-c">
+                    <i class="fa-brands fa-github"></i>
+                    <input type="text"placeholder="github username" class="github">
+                </div>
+                <div class="facebook d-flex align-c">
+                    <i class="fa-brands fa-facebook"></i>
+
+    <input type="text" placeholder="facebook username" class="">
+                                </div>
+                <div class="linkedin d-flex align-c">
+                    <i class="fa-brands fa-linkedin"></i>
+
+    <input type="text" placeholder="linkedin username" >
+                                </div>
+                <div class="youtube d-flex align-c">
+                    <i class="fa-brands fa-youtube"></i>
+
+    <input type="text" placeholder="youtube username">
+                                </div>
                             </div>
                             <div class="widgets social mt-20 bg-w  p-rel p-10 bord-rad10">
                                 <h3 class="f-w f-size">
@@ -178,40 +192,88 @@ height: 35px;">
                                 <p class="t-c">
                                     show/hide widgets
                                 </p>
-                                <label for="draft">
-                                    quick draft
-                                    <input type="checkbox" id="draft" checked>
-                                </label>
-                                <label for="targets">
-                                    yearly targets
-                                    <input type="checkbox" id="targets" checked>
-                                </label>
-                                <label for="stats">
-                                    tickets statistics
-                                    <input type="checkbox" id="stats" checked>
-                                </label>
-                                <label for="news">
-                                    latest news
-                                    <input type="checkbox" id="news" checked>
-                                </label>
-                                <label for="tasks">
-                                    latest tasks
-                                    <input type="checkbox" id="tasks" >
-                                </label>
-                                <label for="search">
-                                    top search items
-                                    <input type="checkbox" id="search" checked>
-                                </label>
+
+<div class="one d-flex align-c mb-20">
+    <input type="checkbox" id="draft" checked>
+<label for="draft">
+    quick draft
+</label>
+</div>
+<div class="two d-flex align-c mb-20">
+    <input type="checkbox" id="targets" checked>
+    <label for="targets">
+        yearly targets
+    </label>
+</div>
+<div class="three d-flex align-c mb-20">
+    <input type="checkbox" id="stats" checked>
+    <label for="stats">
+        tickets statistics
+    </label>
+</div>
+<div class="four d-flex align-c mb-20">
+    <input type="checkbox" id="news" checked>
+    <label for="news">
+        latest news
+    </label>
+</div>
+<div class="five d-flex align-c mb-20">
+    <input type="checkbox" id="tasks" >
+    <label for="tasks">
+        latest tasks
+    </label>
+</div>
+<div class="six d-flex align-c">
+    <input type="checkbox" id="search" checked>
+    <label for="search">
+        top search items
+    </label>
+</div>
+
                             </div>
-                            <div class="backup widgets social mt-20 bg-w  p-rel p-10 bord-rad10">
+                            <div class="backup mt-20 bg-w  p-rel p-10 bord-rad10">
                                 <h3 class="f-size f-w">backup manager</h3>
                                 <p class="t-c">control backup time and location</p>
+                                <div class="top">
+                                    <div class="daily d-flex align-c">
+                                        <input type="radio" class="daily" checked id="daily">
+                                        <label for="daily">daily</label>
+                                    </div>
+                                    <div class="weekly -flex align-c">
+                                        <input type="radio" class="weekly"  id="weekly">
+                                        <label for="weekly">weekly</label>
+                                    </div>
+                                    <div class="monthly -flex align-c">
+                                        <input type="radio" class="monthly"  id="monthly">
+                                        <label for="monthly">monthly</label>
+                                    </div>
+                                </div>
+
+                                <div class="servers d-flex align-c t-center gap-10 pointer">
+                                    <input type="radio" class="mega" id="mega">
+                                    <div class="server" style="width:100%;">
+                                        <label for="mega">
+                                            <i class="fa-solid fa-server d-block"></i>
+                                            megaman
+                                        </label>
+                                    </div>  
+                                    <input type="radio" class="zero" id="zero" checked>
+                                    <div class="server" style="width:100%;">
+                                        <label for="mega">
+                                            <i class="fa-solid fa-server d-block"></i>
+                                            zero
+                                        </label>
+                                    </div>
+                                    <input type="radio" class="sigma" id="sigma">
+                                    <div class="server" style="width:100%;">
+                                        <label for="sigma">
+                                            <i class="fa-solid fa-server d-block"></i>
+                                            sigma
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="footer d-flex j-center align-c">
-                                <div class="bord-rad10"></div>
-                                <div class="bord-rad10"></div>
-                                <div class="bord-rad10"></div>
-                            </div>
+
                 </div>
         </div>    
     </div>

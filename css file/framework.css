@@ -160,6 +160,9 @@ margin: 0 auto;
 .gap-20{
     gap: 20px;
 }
+.gap-10{
+    gap: 10px;
+}
 /* end padding + margin */
 /* start opacity */
 .o{
